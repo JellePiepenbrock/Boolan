@@ -50,4 +50,12 @@ This piece of code will give you the following characteristics of the function:
 - Variance
 - Noise Sensitivity at noise levels [0.1, 0.2, 0.3, 0.4]
 
+Calling the _get_fpolynomial_ function in the following way gives you a Sage Polynomial object:
+
+
+```python
+get_fpolynomial([-1, 1, 1, 1], 2
+```
+This returns: -1/2*a*b + 1/2*a + 1/2*b + 1/2. Which matches the polynomial that was given earlier.
+
 ## References and further reading
