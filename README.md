@@ -18,5 +18,4 @@ Install Sage in its own Conda enviroment
 > conda create -n sage sage
 
 ## Features
-
-<img src="https://latex.codecogs.com/gif.latex?O_t=\text Influence_i &= \sum_{\{S | i \in S \}} \hat{f} (S)^2 " /> 
+<a href="https://www.codecogs.com/eqnedit.php?latex=Influence_i&space;&=&space;\sum_{\{S&space;|&space;i&space;\in&space;S&space;\}}&space;\hat{f}&space;(S)^2" target="_blank"><img src="https://latex.codecogs.com/png.latex?Influence_i&space;&=&space;\sum_{\{S&space;|&space;i&space;\in&space;S&space;\}}&space;\hat{f}&space;(S)^2" title="Influence_i &= \sum_{\{S | i \in S \}} \hat{f} (S)^2" /></a>
