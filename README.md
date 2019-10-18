@@ -64,7 +64,7 @@ Its also possible to do linearity testing, which works as follows. We draw a ran
 ```python
 random_function = [random.choice([-1, 1]) for k in range(512)]
 pol = get_fpolynomial(random_function, 9)
-test_linearity(AND, 9, samples=100) 
+test_linearity(pol, 9, samples=100) 
 ```
 
 ## References and further reading
