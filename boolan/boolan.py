@@ -2,7 +2,7 @@ from sage.all import *
 import numpy as np
 import itertools
 import string
-import pandas as pd
+import random
 
 
 def tt_fourier(num, nb):
@@ -266,3 +266,16 @@ def get_stats(bitcode):
 
     return features
 
+
+def test_linearity(pol, no_inputs, samples=10):
+
+    linearcount = 0.0
+    for i in range(samples):
+        x = [random.choice([-1, 1]) for k in range(no_inputs)]
+        y = [random.choice([-1, 1]) for k in range(no_inputs)]
+
+        xy = [k * l for k, l in zip(x, y)]
+        if pol(*x) * pol(*y) == pol(*xy):
+            linearcount += 1
+
+    return linearcount / samples
