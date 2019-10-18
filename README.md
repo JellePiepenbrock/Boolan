@@ -23,7 +23,7 @@ Boolean functions can be written as polynomials, with -1 coding for True and 1 f
   <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{1}{2}&space;&plus;&space;\frac{1}{2}x_1&space;&plus;&space;\frac{1}{2}x_2&space;-&space;\frac{1}{2}x_1x_2" target="_blank"><img src="https://latex.codecogs.com/png.latex?\frac{1}{2}&space;&plus;&space;\frac{1}{2}x_1&space;&plus;&space;\frac{1}{2}x_2&space;-&space;\frac{1}{2}x_1x_2" title="\frac{1}{2} + \frac{1}{2}x_1 + \frac{1}{2}x_2 - \frac{1}{2}x_1x_2" /></a>
 </p>
 
-The influence of a certain variable on the ouput is another quantity that could be of interest. It is defined as the sum of the squares of all the coefficients of the terms that contain the variable.
+The influence of a certain variable on the ouput is another quantity that could be of interest. It is defined as the sum of the squares of all the coefficients of the terms that contain the variable. The total influence of a function is then the sum of the influences of all the input variables of the function.
 <p align="center">
 <a href="https://www.codecogs.com/eqnedit.php?latex=Influence_i&space;&=&space;\sum_{\{S&space;|&space;i&space;\in&space;S&space;\}}&space;\hat{f}&space;(S)^2" target="_blank"><img src="https://latex.codecogs.com/png.latex?Influence_i&space;&=&space;\sum_{\{S&space;|&space;i&space;\in&space;S&space;\}}&space;\hat{f}&space;(S)^2" title="Influence_i &= \sum_{\{S | i \in S \}} \hat{f} (S)^2" /></a>
   </p>
