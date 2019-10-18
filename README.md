@@ -34,7 +34,9 @@ The influence of a certain variable on the ouput is another quantity that could 
 ## Example
 The two-input AND function can be analysed in the following way
 
-> from boolan.boolan import get_stats
+```python
+from boolan.boolan import get_stats
 
 AND = [-1, 1, 1, 1]
 features = get_stats(AND)
+```
