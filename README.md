@@ -56,7 +56,6 @@ Calling the _get_fpolynomial_ function in the following way gives you a Sage Pol
 ```python
 get_fpolynomial(AND, 2)
 ```
-This returns: -1/2*a*b + 1/2*a + 1/2*b + 1/2. Which matches the polynomial that was given earlier.
 
 This returns: -1/2*a*b + 1/2*a + 1/2*b + 1/2. Which matches the polynomial that was given earlier.
 
