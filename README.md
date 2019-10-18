@@ -14,7 +14,7 @@ Add the conda-forge package channel to config
 Make sure everything is up to date 
 > conda update --all
 
-Install Sage in its own Conda enviroment
+Install Sage in its own Conda environment
 > conda create -n sage sage
 
 ## Features
