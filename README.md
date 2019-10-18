@@ -32,7 +32,7 @@ The influence of a certain variable on the ouput is another quantity that could 
 <a href="https://www.codecogs.com/eqnedit.php?latex=NS_\delta&space;=&space;\frac{1}{2}&space;\sum_{k=0}^N&space;(1&space;-&space;(1&space;-&space;2\delta)^k)&space;W^k[f]" target="_blank"><img src="https://latex.codecogs.com/png.latex?NS_\delta&space;=&space;\frac{1}{2}&space;\sum_{k=0}^N&space;(1&space;-&space;(1&space;-&space;2\delta)^k)&space;W^k[f]" title="NS_\delta = \frac{1}{2} \sum_{k=0}^N (1 - (1 - 2\delta)^k) W^k[f]" /></a>
 
 ## Example
-The two-input AND function can be analysed in the following way
+The two-input AND function can be analysed in the following way. Note that outputs for rows in the truth table are given in the following order: [11, 10, 01, 00]. This is extended in the obvious way for functions with more inputs.
 
 ```python
 from boolan.boolan import get_stats
