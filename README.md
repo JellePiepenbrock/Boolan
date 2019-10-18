@@ -17,6 +17,8 @@ Make sure everything is up to date
 Install Sage in its own Conda environment
 > conda create -n sage sage
 
+Install Boolan
+> pip install https://github.com/JellePiepenbrock/Boolan
 ## Features
 Boolean functions can be written as polynomials, with -1 coding for True and 1 for False (read that again; the ordering is not a mistake!). The two-input AND function can be expressed like this:
 <p align="center">
