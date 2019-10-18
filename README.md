@@ -5,5 +5,12 @@ Boolan is a Python package to determine characteristics of Boolean functions. It
 Boolan uses the Sage computer algebra environment to do its rewriting. In order to install and make use of Boolan, one first has to install Sage. The easiest and most foolproof way to do this, on Ubuntu, is via Conda. To avoid conflicts, one should make a new environment where Sage is installed. 
 
 Add the conda-forge package channel to config
->  conda config --add channels conda-forge
+> conda config --add channels conda-forge
+
+Make sure everything is up to date 
+> conda update --all
+
+Install Sage in its own Conda enviroment
+> conda create -n sage sage
+
 
