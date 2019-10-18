@@ -19,4 +19,4 @@ Install Sage in its own Conda enviroment
 
 ## Features
 
-
+<img src="https://latex.codecogs.com/gif.latex?O_t=\text Influence_i &= \sum_{\{S | i \in S \}} \hat{f} (S)^2 " /> 
