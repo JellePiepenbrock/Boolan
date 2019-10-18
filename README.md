@@ -30,3 +30,11 @@ The influence of a certain variable on the ouput is another quantity that could 
 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=NS_\delta&space;=&space;\frac{1}{2}&space;\sum_{k=0}^N&space;(1&space;-&space;(1&space;-&space;2\delta)^k)&space;W^k[f]" target="_blank"><img src="https://latex.codecogs.com/png.latex?NS_\delta&space;=&space;\frac{1}{2}&space;\sum_{k=0}^N&space;(1&space;-&space;(1&space;-&space;2\delta)^k)&space;W^k[f]" title="NS_\delta = \frac{1}{2} \sum_{k=0}^N (1 - (1 - 2\delta)^k) W^k[f]" /></a>
+
+## Example
+The two-input AND function can be analysed in the following way
+
+> from boolan.boolan import get_stats
+
+AND = [-1, 1, 1, 1]
+features = get_stats(AND)
