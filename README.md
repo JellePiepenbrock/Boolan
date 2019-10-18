@@ -47,3 +47,5 @@ This piece of code will give you the following characteristics of the function:
 - Weights on each order of monomial (3 values in the case of AND)
 - Variance
 - Noise Sensitivity at noise levels [0.1, 0.2, 0.3, 0.4]
+
+## References and further reading
