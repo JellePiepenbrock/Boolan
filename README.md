@@ -58,4 +58,14 @@ get_fpolynomial(AND, 2)
 ```
 This returns: -1/2*a*b + 1/2*a + 1/2*b + 1/2. Which matches the polynomial that was given earlier.
 
+This returns: -1/2*a*b + 1/2*a + 1/2*b + 1/2. Which matches the polynomial that was given earlier.
+
+Its also possible to do linearity testing, which works as follows. We draw a random 9-input Boolean function, which has 512 rows in its truth table, and test whether it is linear. If a function is linear, the function _test_linearity_ will return 1.0, otherwise it will return how many of the inputs that it tested the function behaved linearly on.
+
+```python
+random_function = [random.choice([-1, 1]) for k in range(512)]
+pol = get_fpolynomial(random_function, 9)
+test_linearity(AND, 9, samples=100) 
+```
+
 ## References and further reading
