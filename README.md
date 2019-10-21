@@ -3,7 +3,7 @@
 ----------------
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
-Boolan is a Python package to determine characteristics of Boolean functions. It uses the fact that Boolean functions can be expressed as multilinear polynomials over a two valued field {1, -1}. Transforming the Boolean functions into this polynomial (which is close to a Fourier transform), exposes all kinds of information about the behavior of the function, which can be gleaned from the Fourier coefficients of the polynomial.
+Boolan (boolean analysis) is a Python package to determine characteristics of Boolean functions. It uses the fact that Boolean functions can be expressed as multilinear polynomials over a two valued field {1, -1} [1]. Transforming the Boolean functions into this polynomial (which is close to a Fourier transform), exposes all kinds of information about the behavior of the function, which can be gleaned from the Fourier coefficients of the polynomial.
 
 ## Install
 Boolan uses the Sage computer algebra environment to do its rewriting. In order to install and make use of Boolan, one first has to install Sage. The easiest and most foolproof way to do this, on Ubuntu, is via Conda. To avoid conflicts, one should make a new environment where Sage is installed. If you don't have Conda, you can get it [here](https://www.anaconda.com/distribution/).
@@ -39,10 +39,10 @@ We can also calculate the noise sensitivity of the function, given that there is
 The two-input AND function can be analysed in the following way. Note that outputs for rows in the truth table are given in the following order: [11, 10, 01, 00]. This is extended in the obvious way for functions with more inputs.
 
 ```python
-from boolan.boolan import get_stats
+from boolan.boolan import get_function_characterics
 
 AND = [-1, 1, 1, 1]
-features = get_stats(AND)
+features = get_function_characterics(AND)
 ```
 
 This piece of code will give you the following characteristics of the function:
@@ -56,10 +56,11 @@ Calling the _get_fpolynomial_ function in the following way gives you a Sage Pol
 
 
 ```python
-get_fpolynomial(AND, 2)
+>>> get_fpolynomial(AND, 2)
+"-1/2*a*b + 1/2*a + 1/2*b + 1/2"
 ```
 
-This returns: -1/2*a*b + 1/2*a + 1/2*b + 1/2. Which matches the polynomial that was given earlier.
+Which matches the polynomial that was given earlier.
 
 Its also possible to do linearity testing, which works as follows. We draw a random 9-input Boolean function, which has 512 rows in its truth table, and test whether it is linear. If a function is linear, the function _test_linearity_ will return 1.0, otherwise it will return how many of the inputs that it tested the function behaved linearly on.
 
@@ -70,3 +71,4 @@ test_linearity(pol, 9, samples=100)
 ```
 
 ## References and further reading
+1. O'Donnell, R. (2014). Analysis of boolean functions. Cambridge University Press.

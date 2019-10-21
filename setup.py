@@ -4,9 +4,9 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="boolan-jpiepenbrock",
+    name="boolan",
     version="0.0.1",
-    author="Jelle Pipeenbrock",
+    author="Jelle Piepenbrock",
     author_email="jellepiepenbrock@gmail.com",
     description="Analysis of Boolean functions",
     long_description=long_description,
