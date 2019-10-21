@@ -35,7 +35,9 @@ We can also calculate the noise sensitivity of the function, given that there is
 <a href="https://www.codecogs.com/eqnedit.php?latex=NS_\delta&space;=&space;\frac{1}{2}&space;\sum_{k=0}^N&space;(1&space;-&space;(1&space;-&space;2\delta)^k)&space;W^k[f]" target="_blank"><img src="https://latex.codecogs.com/png.latex?NS_\delta&space;=&space;\frac{1}{2}&space;\sum_{k=0}^N&space;(1&space;-&space;(1&space;-&space;2\delta)^k)&space;W^k[f]" title="NS_\delta = \frac{1}{2} \sum_{k=0}^N (1 - (1 - 2\delta)^k) W^k[f]" /></a>
 </p>
 
-## Example
+## Examples
+
+### Getting the characteristics of a function
 The two-input AND function can be analysed in the following way. Note that outputs for rows in the truth table are given in the following order: [11, 10, 01, 00]. This is extended in the obvious way for functions with more inputs.
 
 ```python
@@ -52,6 +54,7 @@ This piece of code will give you the following characteristics of the function:
 - Variance
 - Noise Sensitivity at noise levels [0.1, 0.2, 0.3, 0.4]
 
+### Rewriting to a polynomial
 Calling the _get_fpolynomial_ function in the following way gives you a Sage Polynomial object:
 
 
@@ -62,7 +65,8 @@ Calling the _get_fpolynomial_ function in the following way gives you a Sage Pol
 
 Which matches the polynomial that was given earlier.
 
-Its also possible to do linearity testing, which works as follows. We draw a random 9-input Boolean function, which has 512 rows in its truth table, and test whether it is linear. If a function is not-linear, the function _test_linearity_ will return some number below 1.0. Depending on the number of samples taken, even if the function gives back 1.0, it may not be linear. 
+### Linearity testing
+Its also possible to do (rudimentary) linearity testing, which works as follows. We draw a random 9-input Boolean function, which has 512 rows in its truth table, and test whether it is linear. If a function is not-linear, the function _test_linearity_ will return some number below 1.0. Depending on the number of samples taken, even if the function gives back 1.0, it may not be linear. 
 
 ```python
 random_function = [random.choice([-1, 1]) for k in range(512)]
