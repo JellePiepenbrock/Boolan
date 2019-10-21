@@ -62,7 +62,7 @@ Calling the _get_fpolynomial_ function in the following way gives you a Sage Pol
 
 Which matches the polynomial that was given earlier.
 
-Its also possible to do linearity testing, which works as follows. We draw a random 9-input Boolean function, which has 512 rows in its truth table, and test whether it is linear. If a function is linear, the function _test_linearity_ will return 1.0, otherwise it will return how many of the inputs that it tested the function behaved linearly on.
+Its also possible to do linearity testing, which works as follows. We draw a random 9-input Boolean function, which has 512 rows in its truth table, and test whether it is linear. If a function is not-linear, the function _test_linearity_ will return some number below 1.0. Depending on the number of samples taken, even if the function gives back 1.0, it may not be linear. 
 
 ```python
 random_function = [random.choice([-1, 1]) for k in range(512)]
