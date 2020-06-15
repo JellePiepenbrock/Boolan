@@ -6,23 +6,42 @@
 Boolan (boolean analysis) is a small Python package to determine characteristics of Boolean functions. It uses the fact that Boolean functions can be expressed as multilinear polynomials over a two valued field {1, -1} [1]. Transforming the Boolean functions into this polynomial (which is close to a Fourier transform), exposes all kinds of information about the behavior of the function, which can be gleaned from the Fourier coefficients of the polynomial.
 
 ## Install
+### Sage computer algebra environment 
+Boolan uses the Sage computer algebra environment to do its rewriting. In order to install and make use of Boolan, one first has to install Sage.
 
-### Ubuntu
-Boolan uses the Sage computer algebra environment to do its rewriting. In order to install and make use of Boolan, one first has to install Sage. The easiest and most foolproof way to do this, on Ubuntu, is via Conda. To avoid conflicts, one should make a new environment where Sage is installed. If you don't have Conda, you can get it [here](https://www.anaconda.com/distribution/).
+### Linux and macOS
+The easiest and most foolproof way to do this is via [Conda Forge](http://doc.sagemath.org/html/en/installation/conda.html). To avoid conflicts, one should make a new environment where Sage is installed. If you don't have Conda, you can get it [here](https://www.anaconda.com/distribution/).
 
 Add the conda-forge package channel to config
-> conda config --add channels conda-forge
+
+```console
+conda config --add channels conda-forge
+```
 
 Make sure everything is up to date 
-> conda update --all
+```console
+conda update --all
+```
 
 Install Sage in its own Conda environment
-> conda create -n sage sage
+```console
+conda create -n sage sage
+```
 
 Install Boolan
-> pip install https://github.com/JellePiepenbrock/Boolan
+
+```console
+pip install git+https://github.com/JellePiepenbrock/Boolan
+```
 
 ### Windows
+SageMath on Windows requires a 64-bit version Windows, which is likely on a modern computer. You can download the pre-build SageMath installer for Windows from the [github release page](https://github.com/sagemath/sage-windows/releases). For alternatives, you can have a look at the [installation guide](http://doc.sagemath.org/html/en/installation/binary.html#microsoft-windows-cygwin). Note that you need to run the Python environment that is bundled with SageMath. You can install Boolan from the inside of the environment, such as the notebook, via this command:
+
+```python
+import sys
+!{sys.executable} -m pip install git+https://github.com/JellePiepenbrock/Boolan
+```
+Read more on the [SageMath FAQ](http://doc.sagemath.org/html/en/faq/faq-usage.html#how-do-i-import-sage-into-a-python-script).
 
 ## Features
 Boolean functions can be written as polynomials, with -1 coding for True and 1 for False (read that again; the ordering is not a mistake!). The two-input AND function can be expressed like this:
@@ -61,7 +80,6 @@ This piece of code will give you the following characteristics of the function:
 
 ### Rewriting to a polynomial
 Calling the _get_fpolynomial_ function in the following way gives you a Sage Polynomial object:
-
 
 ```python
 >>> get_fpolynomial(AND, 2)
