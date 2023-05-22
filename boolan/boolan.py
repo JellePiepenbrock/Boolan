@@ -237,7 +237,7 @@ def get_variance(pol, num_vars):
     return var
 
 
-def get_function_characterics(bitcode):
+def get_function_characteristics(bitcode):
 
     """
     This function collects the various statistics
