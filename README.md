@@ -65,10 +65,10 @@ We can also calculate the noise sensitivity of the function, given that there is
 The two-input AND function can be analysed in the following way. Note that outputs for rows in the truth table are given in the following order: [11, 10, 01, 00]. This is extended in the obvious way for functions with more inputs.
 
 ```python
-from boolan.boolan import get_function_characterics
+from boolan.boolan import get_function_characteristics
 
 AND = [-1, 1, 1, 1]
-features = get_function_characterics(AND)
+features = get_function_characteristics(AND)
 ```
 
 This piece of code will give you the following characteristics of the function:
